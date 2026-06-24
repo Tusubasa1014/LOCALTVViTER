@@ -33,3 +33,76 @@ pip install flask
 # Sunucuyu başlat
 python3 server.py
 
+
+🌐 Kullanım
+Tarayıcıda aç: http://localhost:8080
+
+Admin Paylaşımı
+Admin şifresi: 12345
+
+Şifreyi değiştirmek için server.py içinde ADMIN_SIFRE değişkenini düzenle
+
+Ağdaki Diğer Cihazlardan Bağlanma
+bash
+# IP adresini öğren
+hostname -I
+
+# Diğer cihazdan bağlan
+http://192.168.x.x:8080
+ngrok ile Dünyaya Açma
+bash
+ngrok http 8080
+📁 Dosya Yapısı
+text
+tvvitter/
+├── server.py          # Flask sunucu
+├── requirements.txt   # Bağımlılıklar
+├── README.md          # Bu dosya
+├── static/
+│   ├── resimler/      # Yüklenen resimler
+│   └── videolar/      # Yüklenen videolar
+└── templates/
+    └── index.html     # Ana sayfa
+🔧 Özelleştirme
+Admin Şifresi Değiştirme
+server.py dosyasında:
+
+python
+ADMIN_SIFRE = "yeni_sifre"
+Sahte Tweet Sıklığı
+server.py dosyasında:
+
+python
+time.sleep(90)  # 90 saniye, istediğin değeri yaz
+Tema Değiştirme
+index.html içindeki CSS renk kodlarını düzenle.
+
+🛡️ Güvenlik
+Sadece yerel ağda çalışır
+
+Admin şifresi olmadan paylaşım yapılamaz
+
+Veritabanı yok, sunucu kapanınca her şey silinir
+
+📝 Lisans
+MIT
+
+Geliştirici: [Senin Adın]
+
+Yapım Tarihi: 2024
+
+text
+
+---
+
+## 3️⃣ Kaydet: Ctrl+X, Y, Enter
+
+---
+
+## 4️⃣ GitHub'a yükle:
+
+```bash
+cd ~/basit-twitter
+git add README.md
+git commit -m "README eklendi"
+git push
